@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <nav class="navbar">
-                <p class="navabar__title">SHoppping</p>
-                <div class="navabr__search">
+                <h3 class="navabar__title">Shoppping</h3>
+                <div class="navbar__search">
                     <input type="search" placeholder="Search...">
                 </div>
-                <div class="navbar__items">
+                <div class="navbar__icons">
                     <div class="navbar__user">
                         <i class="fa-regular fa-user"></i>
                     </div>
@@ -33,24 +33,66 @@
             </div>
         </div>
     </header>
-    <div class="loading">
-        <div class="lds-spinner">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <main>
+        <div class="loading">
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-    </div>
-    <div class="wrapper"></div>
-    <button class="btn">See more</button>
+        <section class="products">
+            <div class="container">
+                <div class="wrapper"></div>
+                <button class="btn">See more</button>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__line"></div>
+            <div class="footer__wrapper">
+                <ul class="footer__collection">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <span>Copyright 2020 ©</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <span>The HandBrake Team </span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <span>| Privacy Policy</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__collection-second">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <span>Found a bug?</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <span>Talk to us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     
 
     <script src="app.js"></script>

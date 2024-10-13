@@ -30,10 +30,10 @@ function createProduct(data){
         card.innerHTML = `
             <img src=${product.images[0]} alt="">
             
-            <p>${product.title}</p>
+            <h3>${product.title}</h3>
             <div class="card_price">
                 <strong>${product.price}$</strong>
-                <button>By now</button>
+                <button>Buy</button>
             </div>
         `;
         wrapper.appendChild(card)
