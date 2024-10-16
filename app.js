@@ -40,11 +40,7 @@ function createProduct(data){
         wrapper.appendChild(card)
     });
 }
-btn.addEventListener("click",()=>{
-    offset++
-    getData("products", offset)
 
-})
 
 async function getCategory(endpoint) {
     const response = await fetch(`${BASE_URL}/${endpoint}`)
@@ -53,6 +49,8 @@ async function getCategory(endpoint) {
         .then(res => createCategory(res))
 }
 getCategory("products/category-list")
+
+let categoryType = "products"
 
 function createCategory(data){
     data.forEach((item)=>{
@@ -63,7 +61,8 @@ function createCategory(data){
         dataElm.setAttribute("value", `/category/${item}`)
 
         dataElm.addEventListener("click",(e)=>{
-            getData(`products${e.target.value}`,offset)
+            categoryType = "products/" + e.target.value
+            getData(categoryType,offset)
         })
         console.log(dataElm)
         liEl.appendChild(dataElm)
@@ -71,6 +70,11 @@ function createCategory(data){
         
     })
 }
+btn.addEventListener("click",()=>{
+    offset++
+    getData(categoryType, offset)
+
+})
 
 wrapper.addEventListener("click", (event)=>{
     if(event.target.className === "card__image"){

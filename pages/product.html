@@ -4,12 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <h3 class="navabar__title">Shoppping</h3>
+                <div class="navbar__search">
+                    <input type="search" placeholder="Search...">
+                </div>
+                <div class="navbar__icons">
+                    <div class="navbar__user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="navbar__cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
     <h1>Product</h1>
     <div class="content"></div>
     <div class="review"></div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__line"></div>
+            <div class="footer__wrapper">
+                <ul class="footer__collection">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <span>Copyright 2020 ©</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <span>The HandBrake Team </span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            <span>| Privacy Policy</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__collection-second">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <span>Found a bug?</span>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <span>Talk to us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+   
 
     <script src="/js/product.js"></script>
 </body>

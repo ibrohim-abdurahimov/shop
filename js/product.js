@@ -1,4 +1,5 @@
 const content = document.querySelector(".content")
+const review = document.querySelector(".review")
 const BASE_URL = "https://dummyjson.com"
 
 async function getData() {
@@ -16,18 +17,37 @@ function createContent(data){
     console.log(data)
     content.innerHTML = `
         <div>
-            <img src=${data.images[0]} alt="">
+            <div class="img">
+                <img class="main__image" src=${data.images[0]} alt="">
+            </div>
+            <div class="img__item">
+                ${data.images.map(i => `<img class="image__item" src=${i} alt="">`)}
+            </div>
+            
         </div>
-        <div>
-            <h1>${data.title}</h1>
-            <h2>${data.price} USD</h2>
-            <p>${data.description}</p>
-            <button>Buy</button>
+        <div class="text">
+            <h1 class="title">${data.title}</h1>
+            <h2 class="price">${data.price} USD</h2>
+            <p class="desc">${data.description}</p>
+            <button class="btn">Buy</button>
             <ul>
-                <li>Lorem ipsum</li>
+                <li>Lorem ipsum idisd</li>
                 <li>Lorem ipsum</li>
                 <li>Lorem ipsum</li>
             </ul>
         </div>
     `
+    data.reviews.forEach(item => {
+        const divEl = document.createElement("div")
+        divEl.className = "review__item"
+        divEl.innerHTML= `
+        <h3>${item.comment}</h3>
+        <p>${item.reviewerName}</p>
+        <div>
+            ${'<i class="fa-solid fa-star"></i>'.repeat(item.rating)}
+            ${'<i class="fa-regular fa-star"></i>'.repeat(5-item.rating)}
+        </div>
+    `
+    review.appendChild(divEl)
+    });
 }
