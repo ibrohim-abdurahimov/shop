@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    grid-gap: 40px;
+}
+img{
+    max-width: 100%;
+}
+.content img{
+    width: 500px;
+}

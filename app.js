@@ -26,9 +26,10 @@ function createProduct(data){
     }
     data.products.forEach(product => {
         const card = document.createElement("div")
+        card.dataset.id = product.id
         card.className = "card"
         card.innerHTML = `
-            <img src=${product.images[0]} alt="">
+            <img src=${product.images[0]} class="card__image" alt="${product.title}">
             
             <h3>${product.title}</h3>
             <div class="card_price">
@@ -70,3 +71,10 @@ function createCategory(data){
         
     })
 }
+
+wrapper.addEventListener("click", (event)=>{
+    if(event.target.className === "card__image"){
+        let id = event.target.closest(".card").dataset.id
+        open(`/pages/product.html?q=${id}` , "_self")
+    }
+})
