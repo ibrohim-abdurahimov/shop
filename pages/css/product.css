@@ -11,6 +11,11 @@ a{
     color: inherit;
     text-decoration: initial;
 }
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -148,4 +153,33 @@ img{
   }
   .footer__collection-second{
     display: flex;
+  }
+
+@media (max-width:930px) {
+    .content{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:600px) {
+    .navbar__search input{
+        font-size: 14px;
+    }
+  .footer__wrapper{
+    margin-top: 15px;
+    flex-direction: column;
+}
+.footer__collection-second{
+  margin-top: 10px;
+}}
+@media (max-width:400px) {
+    .navbar__search{
+        display: none;
+    }
+    .footer__collection{
+      display: block;
+    
+    }
+    .footer__collection li{
+      margin-top: 7px;
+    }
   }

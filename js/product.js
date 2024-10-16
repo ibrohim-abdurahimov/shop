@@ -30,10 +30,10 @@ function createContent(data){
             <h2 class="price">${data.price} USD</h2>
             <p class="desc">${data.description}</p>
             <button class="btn">Buy</button>
-            <ul>
-                <li>Lorem ipsum idisd</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
+            <ul class="info">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos quisquam, culpa commodi, maxime ex nostrum, nulla asperiores officia omnis illum. Quidem necessitatibus dolores fuga? Iusto pariatur asperiores itaque molestias</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio architecto iure dignissimos aliquid tenetur soluta</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam!</li>
             </ul>
         </div>
     `
